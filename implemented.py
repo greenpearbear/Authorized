@@ -1,9 +1,11 @@
 from dao.director_dao import DirectorDAO
 from dao.genre_dao import GenreDAO
 from dao.movie_dao import MovieDAO
+from dao.user_dao import UserDAO
 from service.director_service import DirectorService
 from service.genre_service import GenreService
 from service.movie_service import MovieService
+from service.user_service import UserService
 from setup_db import db
 
 movie_dao = MovieDAO(db.session)
@@ -14,3 +16,6 @@ genre_service = GenreService(genre_dao)
 
 director_dao = DirectorDAO(db.session)
 director_service = DirectorService(director_dao)
+
+user_dao = UserDAO(db.session)
+user_service = UserService(user_dao)
