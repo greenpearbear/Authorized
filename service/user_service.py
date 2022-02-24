@@ -1,7 +1,8 @@
 import hashlib
 import base64
+import hmac
 from dao.user_dao import UserDAO
-from constants import PWD_HASH_SALT, PWD_HASH_ITERATIONS
+from helpers.constants import PWD_HASH_SALT, PWD_HASH_ITERATIONS
 
 
 class UserService:
@@ -13,6 +14,9 @@ class UserService:
 
     def get_one(self, uid):
         return self.dao.get_one(uid)
+
+    def get_by_username(self, name):
+        return self.dao.get_by_username(name)
 
     def post(self, data):
         data['password'] = self.generate_password(data['password'])
@@ -37,3 +41,10 @@ class UserService:
             PWD_HASH_ITERATIONS
         )
         return base64.b64encode(hash_digest)
+
+    def compare_password(self, password_hash, other_password):
+        return hmac.compare_digest(base64.b16decode(password_hash),
+                                   hashlib.pbkdf2_hmac('sha256',
+                                                       other_password.encode('utf-8'),
+                                                       PWD_HASH_SALT,
+                                                       PWD_HASH_ITERATIONS))

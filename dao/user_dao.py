@@ -11,6 +11,9 @@ class UserDAO:
     def get_one(self, uid):
         return self.session.query(User).filter(User.id == uid).one()
 
+    def get_by_username(self, username):
+        return self.session.query(User).filter(User.username == username).one_or_none()
+
     def post(self, data):
         user = User(**data)
         with self.session.begin():
