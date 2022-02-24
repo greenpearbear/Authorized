@@ -10,3 +10,15 @@ class GenreService:
 
     def get_one(self, uid):
         return self.dao.get_one(uid)
+
+    def post(self, data):
+        return self.dao.post(data)
+
+    def put(self, uid, data):
+        genre = self.get_one(uid)
+        genre.id = data.get("id")
+        genre.name = data.get("name")
+        self.dao.put(genre)
+
+    def delete(self, uid):
+        return self.dao.delete(uid)
