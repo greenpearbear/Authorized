@@ -14,11 +14,11 @@ class AuthService:
         user = self.user_service.get_by_username(username)
 
         if user is None:
-            raise abort(404)
+            raise abort(401)
 
         if not is_refresh:
             if not self.user_service.compare_password(user.password, password):
-                abort(404)
+                abort(401)
 
         data = {
             'username': user.username,

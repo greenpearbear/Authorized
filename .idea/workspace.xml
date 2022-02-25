@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d8205f9-43eb-4165-a439-0c1dfe193807" name="Changes" comment="Работа JWT&#10;Сделаны access and refresh tokens, проверка">
+    <list default="true" id="9d8205f9-43eb-4165-a439-0c1dfe193807" name="Changes" comment="Работы с декораторами&#10;Ограничение доступа чтения и редактирования">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/helpers/decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/decorators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/director_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/director_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/genre_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/genre_views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/movie_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/views/movie_views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies.db" beforeDir="false" afterPath="$PROJECT_DIR$/movies.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/auth_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/service/auth_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +157,8 @@
       <workItem from="1645697373691" duration="1566000" />
       <workItem from="1645699127060" duration="219000" />
       <workItem from="1645699360461" duration="10646000" />
-      <workItem from="1645724075501" duration="6124000" />
+      <workItem from="1645724075501" duration="7174000" />
+      <workItem from="1645778098081" duration="1367000" />
     </task>
     <task id="LOCAL-00001" summary="Работа закончена.&#10;Внесены правки.&#10;Сделан фильтр по жанру, режиссеру, году.">
       <created>1645035729258</created>
@@ -215,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645729952213</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Работы с декораторами&#10;Ограничение доступа чтения и редактирования">
+      <created>1645730408471</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1645730408471</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,11 +250,12 @@
     <MESSAGE value="Работа на хэш&#10;Создана хэш функция пароля." />
     <MESSAGE value="Работа над жанром и режиссер&#10;добавлены методы post, put, delete&#10;добавлены dao and service." />
     <MESSAGE value="Работа JWT&#10;Сделаны access and refresh tokens, проверка" />
-    <option name="LAST_COMMIT_MESSAGE" value="Работа JWT&#10;Сделаны access and refresh tokens, проверка" />
+    <MESSAGE value="Работы с декораторами&#10;Ограничение доступа чтения и редактирования" />
+    <option name="LAST_COMMIT_MESSAGE" value="Работы с декораторами&#10;Ограничение доступа чтения и редактирования" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Architecture$Architecture.coverage" NAME="Architecture Coverage Results" MODIFIED="1645031065110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Authorized$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1645699751219" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Authorized$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1645778480491" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Architecture$Flask__main_py_.coverage" NAME="Flask (main.py) Coverage Results" MODIFIED="1645032987000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/Architecture$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1645035965338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Architecture$setup_db.coverage" NAME="setup_db Coverage Results" MODIFIED="1645031129583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
